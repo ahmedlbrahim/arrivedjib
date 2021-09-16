@@ -22,7 +22,7 @@ Route::get('/deconnexion', [ConnexionController::class, 'deconnexion'])->middlew
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth']);
+})->name('dashboard')->middleware(['auth']);
 
 Route::get('/qrcode', function () {
     return view('qrcode');

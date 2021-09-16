@@ -12,6 +12,7 @@
 
 		<!-- FAVICON -->
 		<link rel="shortcut icon" type="image/x-icon" href="{{asset('template/assets/images/brand/favicon.ico')}}" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 		<!-- TITLE -->
 		<title>Liste ArriveDjib</title>
@@ -81,7 +82,10 @@
 					<ul class="side-menu">
 						<li><h3>Main</h3></li>
 						<li class="slide">
-							<a class="side-menu__item"  data-bs-toggle="slide" href="index.html"><i class="side-menu__icon fe fe-home"></i><span class="side-menu__label">Liste</span></a>
+							<a class="side-menu__item"  data-bs-toggle="slide" href="{{ route('dashboard') }}"><i class="side-menu__icon fe fe-home"></i><span class="side-menu__label">Liste</span></a>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item"  data-bs-toggle="slide" href="{{ route('qrcode') }}"><i class="side-menu__icon fas fa-qrcode"></i><span class="side-menu__label">QrCode</span></a>
 						</li>
 					</ul>
 				</aside>
@@ -185,7 +189,7 @@
 						<!-- PAGE-HEADER -->
 						<div class="page-header">
 							<div>
-								<h1 class="page-title">Liste des participants</h1>
+								<h1 class="page-title">Liste des personnes qui viendront à Djibouti</h1>
 							</div>
 							<div class="ms-auto pageheader-btn">
 								<a href="{{ route('qrcode') }}" class="btn btn-primary btn-icon text-white me-2">
@@ -201,7 +205,7 @@
 							<div class="col-lg-12">
 								<div class="card">
 									<div class="card-header">
-										<h3 class="card-title">Liste des participants</h3>
+										<h3 class="card-title">Liste des personnes qui viendront à Djibouti</h3>
 									</div>
 									<div class="card-body">
 										<div class="table-responsive export-table">
@@ -378,14 +382,5 @@
 
 		<!-- CUSTOM JS-->
 		<script src="{{asset('template/assets/js/custom.js')}}"></script>
-
-		{{-- QrCodeScanner --}}
-		<script src="https://raw.githubusercontent.com/mebjas/html5-qrcode/master/minified/html5-qrcode.min.js"></script>
-
-		<script>
-			$('#exampleModalCenter').on('shown.bs.modal', function () {
-				$('#myinput').trigger('focus')
-			})
-		</script>
 	</body>
 </html>
