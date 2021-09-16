@@ -6,14 +6,36 @@
 	<script type="text/javascript" src="https://webqr.com/llqrcode.js"></script>
 	<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 	<script type="text/javascript" src="https://webqr.com/webqr.js"></script>
-	
+	<style>
+		#outdiv
+		{
+			width:640px;
+			height:480px;
+			border: solid;
+			border-width: 3px 3px 3px 3px;
+		}
+		#result
+		{
+			border: solid;
+			border-width: 1px 1px 1px 1px;
+			padding:20px;
+			width:70%;
+		}
+		#mp1
+		{
+			text-align:center;
+			font-size:35px;
+		}
+	</style>
 </head>
 
 <body>
 	<div id="main">
 		<div id="header">
 			<div style="position:relative;top:+20px;left:0px;">
-				
+				<p id="mp1">
+					QR Code scanner
+				</p>
 				
 			</div>
 			<div id="mainbody">
